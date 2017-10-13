@@ -10,7 +10,7 @@ import {
 	} from '../../../routes';
 import IconButton from 'material-ui/IconButton';
 import ListIcon from 'material-ui/svg-icons/action/list';
-import { cssDashboard } from '../../../style';
+import { cssDashboard } from '../../../styles';
 
 function handleClick(props, url) {
 	if (props.action === 'games') {
