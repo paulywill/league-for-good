@@ -4,8 +4,8 @@ import Navigation from '../../helper/NavigationArrow.jsx';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import MenuItem from 'material-ui/MenuItem';
-import { Field, reduxForm } from 'redux-form';
-
+import { Field } from 'redux-form';
+// import { Field, reduxForm } from 'redux-form';
 
 import { cssContent, cssDashboard } from '../../../style';
 
@@ -13,14 +13,14 @@ import { cssContent, cssDashboard } from '../../../style';
 import {
 	TextField,
 	SelectField,
-	DatePicker,
-	Checkbox
+	DatePicker
+	// Checkbox
 } from 'redux-form-material-ui';
 
 
 const FormTemplate = props => {
 	const { handleSubmit, teams } = props;
-	
+
 	return (
 			<div style={cssContent.body}>
 				<Navigation tooltip='Go Back'>
@@ -36,7 +36,7 @@ const FormTemplate = props => {
 							component={DatePicker}
 							floatingLabelStyle={cssDashboard.formRequired}
 							floatingLabelText='Game Date'
-							format={v => v? new Date(v) : null}
+							format={v => v ? new Date(v) : null}
 							formatDate={d => d.toDateString()}
 							name='datePlayed'
 						/>
@@ -56,12 +56,12 @@ const FormTemplate = props => {
 							style={cssDashboard.settings.forms.add.selectField}
 							>
 							{
-								teams.map(team => 
-									<MenuItem 
+								teams.map(team =>
+									(<MenuItem
 										key={team._id}
 										primaryText={team.name}
 										value={team._id}
-									/>
+									/>)
 								)
 							}
 						</Field>
@@ -73,27 +73,27 @@ const FormTemplate = props => {
 							style={cssDashboard.settings.forms.add.selectField}
 							>
 							{
-								teams.map(team => 
-									<MenuItem 
+								teams.map(team =>
+									(<MenuItem
 										key={team._id}
 										primaryText={team.name}
 										value={team._id}
-									/>
+									/>)
 								)
 							}
-						</Field>							
+						</Field>
 					</div>
 					<RaisedButton
 						label='Submit'
 						primary={true}
-						style={{marginRight:5}}
+						style={{marginRight: 5}}
 						type='submit'
 					/>
 					<RaisedButton
 						label='Reset'
 						onTouchTap={props.reset}
 						secondary={true}
-					/>					
+					/>
 				</form>
 			</div>
 	);
@@ -106,5 +106,3 @@ FormTemplate.propTypes = {
 };
 
 export default FormTemplate;
-
-
