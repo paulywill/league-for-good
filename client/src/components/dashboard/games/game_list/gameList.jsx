@@ -20,7 +20,7 @@ function formatSubtitle(season) {
 }
 
 const GameList = props => {
-	const { season } = props;
+    const { season } = props;
 	// const { season, history } = props;
 
 	return (
@@ -60,8 +60,10 @@ function mapDispatchToProps(dispatch) {
 
 GameList.propTypes = {
 	headers: PropTypes.array,
+	history: PropTypes.object,
 	loading: PropTypes.bool,
-	rows: PropTypes.arrayOf(PropTypes.array)
+	rows: PropTypes.arrayOf(PropTypes.array),
+	season: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameList);

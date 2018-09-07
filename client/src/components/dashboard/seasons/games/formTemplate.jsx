@@ -102,6 +102,7 @@ const FormTemplate = props => {
 FormTemplate.propTypes = {
 	handleSubmit: PropTypes.func,
 	reset: PropTypes.func,
+	teams: PropTypes.object,
 	title: PropTypes.string
 };
 

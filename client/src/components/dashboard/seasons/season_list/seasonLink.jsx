@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchGames } from '../../../../actions/index';
@@ -38,6 +39,11 @@ const SeasonLink = props => {
 		</IconButton>
 
 	);
+};
+
+SeasonLink.propTypes = {
+	action: PropTypes.string,
+	season: PropTypes.number
 };
 
 function mapDispatchToProps(dispatch) {
