@@ -36,9 +36,9 @@ export const colData = [
 		cellProp: 'link'
 	},
 	{
-		label: 'Assign',
+		label: 'Approve',
 		style: cssDashboard.table.columns.icon,
-		action: 'edit',
+		action: 'checkCircle',
 		cellProp: 'modal',
 		modalView: 'approvePlayerApplication'
 	},
@@ -97,5 +97,3 @@ export const getPlayerRegistrations = () =>
 			return { headers: colData, rows };
 		}
 	);
-
-
