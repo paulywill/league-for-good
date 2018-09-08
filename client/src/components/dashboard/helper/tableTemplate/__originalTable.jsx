@@ -110,7 +110,7 @@ const Headers = (props) => {
 
 Headers.propTypes = {
 	headers: PropTypes.arrayOf(PropTypes.object),
-	onSort: PropTypes.object,
+	onSort: PropTypes.func,
 	sortColumnIndex: PropTypes.number,
 	sortDirection: PropTypes.string
 };

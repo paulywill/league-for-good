@@ -11,13 +11,15 @@ This is a free, open-source web application designed to help sports leagues trac
 
 In order for the authorization component of this app to work, it needs to be registered with Google. Here is a helpful walkthrough of that process: (https://developers.google.com/identity/sign-in/web/devconsole-project)
 
+This includes enabling the "Google+ API" on the Google API Console Dashboard.
+
 ### Steps
 
 - Fork and clone the repo
 - Run `npm install`
-- In the root directory, create a .env file and place the following: 
-  - MONGO_URI = *Your database uri* 
-  - GOOGLE_CLIENT_ID = *Client id assigned by Google* 
+- In the root directory, create a .env file and place the following:
+  - MONGO_URI = *Your database uri*
+  - GOOGLE_CLIENT_ID = *Client id assigned by Google*
   - GOOGLE_CLIENT_SECRET = *Client secret assigned by Google*
   - SESSION_SECRET = *Any random string of characters*
   - GOOGLE_CALLBACK_URL = http://localhost:4000/auth/google/callback (*Use for the callback url in the Google API console*)
