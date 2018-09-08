@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 
 import * as Links from '../../routes';
 
-import DeleteLeagueForm from './forms/deleteLeagueForm.jsx';
 import AddStaffForm from './forms/addStaffForm.jsx';
 import StaffList from './staff_list/staffList.jsx';
 
@@ -18,10 +17,7 @@ const SettingsRoutes = () => (
 			component={AddStaffForm}
 			path={Links.SETTINGS_ADD_STAFF_FORM}
 		/>
-		<Route
-			component={DeleteLeagueForm}
-			path={Links.SETTINGS_DELETE_LEAGUE}
-		/>
+
 	</div>
 );
 
